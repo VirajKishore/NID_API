@@ -87,3 +87,7 @@ The above has created a new folder alembic with /versions, env.py, readme and sc
 - ```python
   from fastapi.middleware.cors import CORSMiddleware
   ```
+
+Latest Update:
+
+Need to check what package the guide is recommending to host the API locally to test. Is it uvicorn?
