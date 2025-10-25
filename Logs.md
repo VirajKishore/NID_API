@@ -73,4 +73,9 @@ The above has created a new folder alembic with /versions, env.py, readme and sc
 
 * We initialize FastAPI using FastAPI() constructor that helps taking care of routing, json validation using pydantic and API docs using Swagger and middleware.
 * Using @app,get("/notes"}) to add a get request which returns all notes. We should declare a DBSession and use it to query the DB for all notes.
-*
+* We create post request similar way. But in schemas we create NoteInput using pydantic. This NoteInput can be used in the create request in main.py to give a payload structure for the API to expect. If the payload in the request does not match this, then it instantly returns a Bad Request.
+* We created update using the same NoteInput payload structure and a note id to grab the existing note. Missing notes errors handled.
+* Delete is also created similarly.
+* API endpoint configurations are done (CRUD)
+
+#### Handling CORS
