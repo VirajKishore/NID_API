@@ -9,7 +9,7 @@ from datetime import datetime
 app = FastAPI()
 
 origins = [
-    "http://localhost:5173" # React app
+    "http://localhost:5173" # React app,
 ]
 
 app.add_middleware(
@@ -47,7 +47,7 @@ def add_note(note: NoteInput):
     return new_note
 
 
-@app.put(f"/note/{note_id}")
+@app.put("/note/{note_id}")
 def update_note(note_id: int, note: NoteInput):
     db = DBSession()
     try:
@@ -70,7 +70,7 @@ def update_note(note_id: int, note: NoteInput):
     return db_note
 
 
-@app.delete(f"/note/{note_id}")
+@app.delete("/note/{note_id}")
 def delete_note(note_id: int):
     db = DBSession()
 
