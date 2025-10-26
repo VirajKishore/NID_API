@@ -9,7 +9,7 @@ from datetime import datetime
 app = FastAPI()
 
 origins = [
-    "http://localhost:5173" # React app,
+    "http://localhost:5173", # React app
     "https://note-it-down-gamma.vercel.app"
 ]
 
